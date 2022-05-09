@@ -24,7 +24,7 @@ $(function () {
       if ($(".incoming").length === 0) {
         $("<div>")
           .addClass("message__date")
-          .text(spawnDate())
+          .text(spawnTime() + ' ' + spawnDate())
           .appendTo(".main");
       }
       $("<div>").addClass("incoming").text(text).appendTo(".main");
@@ -58,7 +58,7 @@ $(function () {
     $("#message").val("");
     $("<span>")
       .addClass("message__time")
-      .text(spawnTime())
+      .text(spawnTime() + ' ' + spawnDate())
       .appendTo(".outgoing");
 
     $(".wrapper").scrollTop(9999);
