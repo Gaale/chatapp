@@ -24,15 +24,15 @@ $(function () {
       if ($(".incoming").length === 0) {
         $("<div>")
           .addClass("message__date")
-          .text(spawnTime() + ' ' + spawnDate())
+          .text(spawnDate())
           .appendTo(".main");
       }
       $("<div>").addClass("incoming").text(text).appendTo(".main");
       $("<span>")
         .addClass("message__time")
-        .text(spawnTime())
+        .text(spawnTime() + ' ' + spawnDate())
         .appendTo(".incoming");
-      $(".wrapper").scrollTop(999);
+      $(".wrapper").scrollTop(9999);
     }, 2000);
   }
 
